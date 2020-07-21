@@ -1,4 +1,4 @@
-/*jshint esversion: 6*/
+/*jshint esversion: 10*/
 
 import React from 'react';
 import { render } from '@testing-library/react';
