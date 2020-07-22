@@ -1,7 +1,7 @@
 /*jshint esversion: 10*/
 
 import React from 'react';
-import { Card } from '../card/card.component'
+import { Card } from '../card/card.component';
 import "./card-list.styles.css";
 
 /* Card list component is just responsible for rendering the cards it is
