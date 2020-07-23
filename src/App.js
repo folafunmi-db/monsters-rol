@@ -29,13 +29,10 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
-      <CardList monsters={ this.state.monsters }>
-        
-      </CardList>
+      <CardList monsters={ this.state.monsters } />
       </div>
     );
   }
 }
-
 
 export default App;
