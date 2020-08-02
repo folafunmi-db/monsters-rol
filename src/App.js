@@ -24,6 +24,9 @@ class App extends React.Component {
       monsters: [],
       searchField: ''
     };
+
+    //using the bind method you'd have to bind every method
+    // this.handleChange = this.handleChange.bind(this);
   }
 
   // lifecycle method
@@ -31,6 +34,13 @@ class App extends React.Component {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => this.setState({ monsters: users }));
+  }
+
+  /**arrow functions already get lexical scoping without 'bind' constructor, they 
+  set the context of 'this' to whatever initially declared it 
+  in this case that's the App component */
+  handleChange = (e) => {
+    this.setState({ searchField: e.target.value });
   }
 
   render() {
@@ -44,7 +54,7 @@ class App extends React.Component {
       <div className="App">
       <SearchBox 
         placeholder="Search Monsters" 
-        handleChange={e => this.setState({ searchField: e.target.value })} 
+        handleChange={this.handleChange} 
       />
       <CardList monsters={ filteredMonsters } />
       </div>
