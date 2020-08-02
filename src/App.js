@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     /* super() calls the constructor function on the component class
     and that gives access to 'this.state'
-
+    
     'state' is a property that now exists on the class App and 
     can be set to something
     
@@ -16,7 +16,8 @@ class App extends React.Component {
     super();
     
     this.state = {
-      monsters: []
+      monsters: [],
+      searchField: ''
     };
   }
 
@@ -29,6 +30,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="App">
+      <input type="search" placeholder="Search Monsters" onChange={e => console.log(e)} />
       <CardList monsters={ this.state.monsters } />
       </div>
     );
