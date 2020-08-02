@@ -1,9 +1,11 @@
 /*jshint esversion: 10*/
+
 import React from 'react';
 import './App.css';
 
 import { CardList } from './components/card-list/card-list.component';
 
+// class method
 class App extends React.Component {
   constructor() {
     /* super() calls the constructor function on the component class
@@ -11,6 +13,8 @@ class App extends React.Component {
     
     'state' is a property that now exists on the class App and 
     can be set to something
+
+    class component also has access to lifecycle methods
     
     Also provides access to setState*/
     super();
@@ -21,6 +25,7 @@ class App extends React.Component {
     };
   }
 
+  // lifecycle method
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
