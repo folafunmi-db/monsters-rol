@@ -1,15 +1,15 @@
 /*jshint esversion: 10 */
 
-import React from 'react';
+import React from "react";
 
-import './search-box.styles.css';
+import "./search-box.styles.css";
 
-// functional component - simply gets props and returns HTML 
+// functional component - simply gets props and returns HTML
 export const SearchBox = ({ placeholder, handleChange }) => (
-    <input 
-        className='search'
-        type="search" 
-        placeholder={placeholder} 
-        onChange={handleChange} 
-    />
+	<input
+		className="search"
+		type="search"
+		placeholder={placeholder}
+		onChange={handleChange}
+	/>
 );
